@@ -19,12 +19,16 @@
   "bugs": {
     "url": "https://github.com/gokaygurcan/analytics/issues"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "node index.js"
+  },
   "keywords": [
     "analytics",
     "beacon",
     "google"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.14.0"
+  },
   "devDependencies": {}
 }
