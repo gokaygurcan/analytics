@@ -1,0 +1,30 @@
+{
+  "name": "@gokaygurcan/analytics",
+  "version": "1.0.0",
+  "description": "Analytics beacon for general purpose.",
+  "homepage": "https://analytics.gokaygurcan.com/",
+  "authors": [
+    {
+      "name": "Gökay Gürcan",
+      "email": "info@gokaygurcan.com",
+      "url": "https://www.gokaygurcan.com/"
+    }
+  ],
+  "copyright": "2016",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gokaygurcan/analytics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gokaygurcan/analytics/issues"
+  },
+  "scripts": {},
+  "keywords": [
+    "analytics",
+    "beacon",
+    "google"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
