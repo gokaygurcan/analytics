@@ -28,7 +28,11 @@
     "google"
   ],
   "dependencies": {
-    "express": "^4.14.0"
+    "body-parser": "^1.15.2",
+    "chalk": "^1.1.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "serve-favicon": "^2.3.0"
   },
   "devDependencies": {}
 }
