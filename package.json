@@ -20,7 +20,8 @@
     "url": "https://github.com/gokaygurcan/analytics/issues"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "xo"
   },
   "keywords": [
     "analytics",
@@ -35,5 +36,10 @@
     "serve-favicon": "^2.3.0",
     "universal-analytics": "^0.4.6"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "space": 2
+  }
 }

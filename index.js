@@ -22,24 +22,24 @@ app.enable('trust proxy');
 app.set('x-powered-by', false);
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // magic!
-app.get('/', (req, res, next) => {
+app.get('/', (req, res) => {
   res.redirect(302, 'https://www.gokaygurcan.com/');
 });
 
-app.get('/:tracking_id/*.(svg|png|gif)', (req, res, next) => {
+app.get('/:tracking_id/*.(svg|png|gif)', (req, res) => {
   let params = req.params;
-  let query  = req.query;
+  let query = req.query;
 
   // vars
   let id = params.tracking_id;
   let path = params['0'];
   let ext = params['1'];
-  let style = query.style || 'flat-square';
+  let style = query.style ? query.style : 'flat-square';
   let file = ext === 'gif' ? 'pixel' : 'badge-' + style;
 
   // create a visitor
@@ -71,10 +71,10 @@ const server = http.createServer(app);
 server.listen(port);
 
 // handle events
-server.on('error', (error) => {
+server.on('error', error => {
   console.error(chalk.red(`Error occured: ${chalk.underline(error.code)}`));
   throw error;
-}).on('listening', (data) => {
+}).on('listening', () => {
   console.info(chalk.green(`Started on port ${chalk.underline(server.address().port)}`));
   console.info(chalk.gray(`ktrl/Ctrl + C to shut down. \n`));
 });
