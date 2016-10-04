@@ -40,6 +40,9 @@
     "xo": "^0.16.0"
   },
   "xo": {
-    "space": 2
+    "space": 2,
+    "rules": {
+      "brace-style": 0
+    }
   }
 }
