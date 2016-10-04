@@ -26,7 +26,6 @@ You can put the beacon in your Readme file to track GitHub statistics:
 ![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg)
 ```
 
-
 Or, you can call the pixel via AJAX call or something similar to track some pages/events:
 
 ```javascript
