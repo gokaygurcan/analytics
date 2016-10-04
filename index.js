@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // magic!
 app.get('/', (req, res) => {
-  res.redirect(302, 'https://www.gokaygurcan.com/');
+  res.redirect(302, 'https://www.gokaygurcan.com/'); // #3
 });
 
 app.get('/:tracking_id/*.(svg|png|gif)', (req, res) => {
@@ -37,25 +37,32 @@ app.get('/:tracking_id/*.(svg|png|gif)', (req, res) => {
 
   // vars
   let id = params.tracking_id;
+  let brand = id.startsWith('UA') ? 'google' : 'yandex';
   let path = params['0'];
   let ext = params['1'];
   let style = query.style ? query.style : 'flat-square';
-  let file = ext === 'gif' ? 'pixel' : 'badge-' + style;
+  let file = ext === 'gif' ? 'pixel' : 'badge-' + brand + '-' + style;
 
-  // create a visitor
-  let visitor = ua(id);
+  if (brand === 'google') {
+    // create a visitor
+    let visitor = ua(id);
 
-  // hit!
-  visitor.pageview(
-    {
-      v: 1,
-      tid: id,
-      t: 'pageview',
-      uip: req.ip, // IPv6
-      ua: req.headers['user-agent'],
-      dp: path
-    }
-  ).send();
+    // hit!
+    visitor.pageview(
+      {
+        v: 1,
+        tid: id,
+        t: 'pageview',
+        uip: req.ip, // IPv6
+        ua: req.headers['user-agent'],
+        dp: path
+      }
+    ).send();
+  }
+  else {
+    // #5
+    // yandex will be done in near future, i hope. 
+  }
 
   // render the badge
   res.sendFile(`${__dirname}/public/${file}.${ext}`);
