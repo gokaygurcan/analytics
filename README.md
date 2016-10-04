@@ -39,4 +39,4 @@ $.ajax({
 
 ## License
 
-GNU General Public Licence v3.0 © [Gökay Gürcan](https://www.gokaygurcan.com/)
+MIT © [Gökay Gürcan](https://www.gokaygurcan.com/)
