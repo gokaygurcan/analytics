@@ -1,5 +1,4 @@
 // https://analytics.gokaygurcan.com/
-
 'use strict';
 
 // core modules
