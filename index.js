@@ -18,6 +18,8 @@ const ua = require('universal-analytics');
 const app = express();
 const port = process.env.PORT || '6598';
 
+app.enable('trust proxy');
+app.set('x-powered-by', false);
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -41,10 +43,19 @@ app.get('/:tracking_id/*.(svg|png|gif)', (req, res, next) => {
   let file = ext === 'gif' ? 'pixel' : 'badge-' + style;
 
   // create a visitor
-  let visitor = ua(id, req._remoteAddress);
+  let visitor = ua(id);
 
   // hit!
-  visitor.pageview(path).send();
+  visitor.pageview(
+    {
+      v: 1,
+      tid: id,
+      t: 'pageview',
+      uip: req.ip, // IPv6
+      ua: req.headers['user-agent'],
+      dp: path
+    }
+  ).send();
 
   // render the badge
   res.sendFile(`${__dirname}/public/${file}.${ext}`);
