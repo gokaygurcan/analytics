@@ -1,0 +1,16 @@
+# https://analytics.gokaygurcan.com/
+
+[core]
+  autocrlf = input
+
+[push]
+  default = matching
+
+[fetch]
+  prune = true
+
+[rebase]
+  autosquash = true
+
+[color]
+  ui = auto

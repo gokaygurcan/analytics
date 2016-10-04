@@ -1,0 +1,16 @@
+# https://analytics.gokaygurcan.com/
+
+language: node_js
+node_js:
+  - '4' # LTS
+  - '6' # Latest
+
+sudo: required
+dist: trusty
+
+before_install:
+  - npm install -g npm
+  - npm install -g xo
+
+script: 
+  - npm test
