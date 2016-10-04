@@ -61,7 +61,7 @@ app.get('/:tracking_id/*.(svg|png|gif)', (req, res) => {
   }
   else {
     // #5
-    // yandex will be done in near future, i hope. 
+    // yandex will be done in near future, i hope.
   }
 
   // render the badge
