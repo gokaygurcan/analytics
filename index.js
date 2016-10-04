@@ -29,7 +29,7 @@ app.get('/', (req, res, next) => {
   res.redirect(302, 'https://www.gokaygurcan.com/');
 });
 
-app.get('/:tracking_id/*.(svg|png)', (req, res, next) => {
+app.get('/:tracking_id/*.(svg|png|gif)', (req, res, next) => {
   let params = req.params;
   let query  = req.query;
 
@@ -38,7 +38,8 @@ app.get('/:tracking_id/*.(svg|png)', (req, res, next) => {
   let path = params['0'];
   let ext = params['1'];
   let style = query.style || 'flat-square';
-  
+  let file = ext === 'gif' ? 'pixel' : 'badge-' + style;
+
   // create a visitor
   let visitor = ua(id, req._remoteAddress);
 
@@ -46,7 +47,7 @@ app.get('/:tracking_id/*.(svg|png)', (req, res, next) => {
   visitor.pageview(path).send();
 
   // render the badge
-  res.sendFile(`${__dirname}/public/badge-${style}.${ext}`);
+  res.sendFile(`${__dirname}/public/${file}.${ext}`);
 });
 
 // set port
