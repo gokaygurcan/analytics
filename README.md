@@ -40,3 +40,4 @@ $.ajax({
 ## License
 
 MIT © [Gökay Gürcan](https://www.gokaygurcan.com/)
+<!-- useless comment for get the hacktoberfest shirt-->
