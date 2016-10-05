@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Analytics by gokaygurcan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Analytics</h1>
+      <h2 class="project-tagline">Analytics beacon for general purpose.</h2>
+      <a href="https://github.com/gokaygurcan/analytics" class="btn">View on GitHub</a>
+      <a href="https://github.com/gokaygurcan/analytics/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/gokaygurcan/analytics/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="analytics" class="anchor" href="#analytics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Analytics</h1>
+
+<p>Analytics beacon for general purpose.</p>
+
+<hr>
+
+<p><img src="https://analytics.gokaygurcan.com/UA-55204660-5/gokaygurcan/analytics.svg?style=flat-square" alt="analytics">
+<img src="https://img.shields.io/website/https/analytics.gokaygurcan.com.svg?style=flat-square" alt="website">
+<img src="https://img.shields.io/travis/gokaygurcan/analytics.svg?style=flat-square" alt="travis ci">
+<img src="https://snyk.io/test/github/gokaygurcan/analytics/65f28c8313247b99daa4226ed27f5605085eceaf/badge.svg?style=flat-square" alt="vulnerabilities">
+<img src="https://img.shields.io/github/license/gokaygurcan/analytics.svg?style=flat-square" alt="license"></p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a> Installation</h2>
+
+<div class="highlight highlight-source-shell"><pre>git clone git@github.com:gokaygurcan/analytics.git
+<span class="pl-c1">cd</span> analytics
+npm install
+npm start</pre></div>
+
+<h2>
+<a id="showcase" class="anchor" href="#showcase" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Showcase</h2>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Google (svg)</th>
+<th>Google (png)</th>
+<th>Yandex (svg)</th>
+<th>Yandex (png)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flat square</td>
+<td><img src="public/badge-google-flat-square.svg" alt="google flat-square"></td>
+<td><img src="public/badge-google-flat-square.png" alt="google flat-square"></td>
+<td><img src="public/badge-yandex-flat-square.svg" alt="yandex flat-square"></td>
+<td><img src="public/badge-yandex-flat-square.png" alt="yandex flat-square"></td>
+</tr>
+<tr>
+<td>Flat</td>
+<td><img src="public/badge-google-flat.svg" alt="google flat"></td>
+<td><img src="public/badge-google-flat.png" alt="google flat"></td>
+<td><img src="public/badge-yandex-flat.svg" alt="yandex flat"></td>
+<td><img src="public/badge-yandex-flat.png" alt="yandex flat"></td>
+</tr>
+<tr>
+<td>Plastic</td>
+<td><img src="public/badge-google-plastic.svg" alt="google plastic"></td>
+<td><img src="public/badge-google-plastic.png" alt="google plastic"></td>
+<td><img src="public/badge-yandex-plastic.svg" alt="yandex plastic"></td>
+<td><img src="public/badge-yandex-plastic.png" alt="yandex plastic"></td>
+</tr>
+<tr>
+<td>Social</td>
+<td><img src="public/badge-google-social.svg" alt="google social"></td>
+<td><img src="public/badge-google-social.png" alt="google social"></td>
+<td><img src="public/badge-yandex-social.svg" alt="yandex social"></td>
+<td><img src="public/badge-yandex-social.png" alt="yandex social"></td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>You can put the beacon in your Readme file to track GitHub statistics:</p>
+
+<div class="highlight highlight-source-gfm"><pre>![<span class="pl-e">analytics</span>](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg)</pre></div>
+
+<p>Or, you can call the pixel via AJAX call or something similar to track some pages/events:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-en">ajax</span>({
+  method<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>GET<span class="pl-pds">'</span></span>,
+  url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.gif<span class="pl-pds">'</span></span>
+}).<span class="pl-en">done</span>(<span class="pl-k">function</span>(<span class="pl-smi">response</span>) {
+  <span class="pl-en">console</span>.<span class="pl-c1">log</span>(response); <span class="pl-c">// this will be a 1x1 pixel image though</span>
+});</pre></div>
+
+<blockquote>
+<p>Note: you can use anything you like but using organization_name/repository_name will help you if you want to use more than one repository with only one tracking id. </p>
+</blockquote>
+
+<h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a> Examples</h2>
+
+<h3>
+<a id="google" class="anchor" href="#google" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Google</h3>
+
+<p>You can use either <em>svg</em> or <em>png</em> extension with <em>style</em> querystring. Default is <em>flat-square</em>.</p>
+
+<ul>
+<li><p>Flat square: <code>![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg?style=flat-square)</code></p></li>
+<li><p>Flat: <code>![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg?style=flat)</code></p></li>
+<li><p>Plastic: <code>![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg?style=plastic)</code></p></li>
+<li><p>Social: <code>![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg?style=social)</code></p></li>
+</ul>
+
+<h3>
+<a id="yandex" class="anchor" href="#yandex" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Yandex</h3>
+
+<p>You can use either <em>svg</em> or <em>png</em> extension with <em>style</em> querystring. Default is <em>flat-square</em>.</p>
+
+<ul>
+<li><p>Flat square: <code>![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg?style=flat-square)</code></p></li>
+<li><p>Flat: <code>![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg?style=flat)</code></p></li>
+<li><p>Plastic: <code>![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg?style=plastic)</code></p></li>
+<li><p>Social: <code>![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg?style=social)</code></p></li>
+</ul>
+
+<h3>
+<a id="pixel" class="anchor" href="#pixel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a> Pixel</h3>
+
+<p>You can only use gif extension, no svg or png can be used as a pixel image.</p>
+
+<ul>
+<li>Pixel: <code>![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.gif)</code>
+</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT © <a href="https://www.gokaygurcan.com/">Gökay Gürcan</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/gokaygurcan/analytics">Analytics</a> is maintained by <a href="https://github.com/gokaygurcan">gokaygurcan</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
