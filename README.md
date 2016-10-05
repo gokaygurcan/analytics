@@ -12,6 +12,12 @@ Analytics beacon for general purpose.
 
 ## Installation
 
+You can deploy to Heroku:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+or run on your own machine:
+
 ```bash
 git clone git@github.com:gokaygurcan/analytics.git
 cd analytics
@@ -49,7 +55,7 @@ $.ajax({
 });
 ```
 
-> Note: you can use anything you like but using organization_name/repository_name will help you if you want to use more than one repository with only one tracking id. 
+> Note: you can use anything you like but using organization_name/repository_name will help you if you want to use more than one repository with only one tracking id.
 
 
 ## Examples
