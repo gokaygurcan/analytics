@@ -26,10 +26,21 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// magic!
-app.get('/', (req, res) => {
-  res.redirect(302, 'https://www.gokaygurcan.com/'); // #3
+
+app.set("view options", {layout: false});
+app.use(express.static(__dirname + '/'));
+
+app.get('/', function(req, res) {
+    res.render('index.html');
 });
+
+
+// magic!
+//app.get('/', (req, res) => {
+  //res.redirect(302, 'https://www.gokaygurcan.com/'); // #3
+
+  //res.sendFile(path.join(__dirname, 'index.html'));
+//});
 
 app.get('/:tracking_id/*.(svg|png|gif)', (req, res) => {
   let params = req.params;
