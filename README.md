@@ -28,12 +28,47 @@ npm start
 
 ## Showcase
 
-| Type        | Google (svg) | Google (png) | Yandex (svg) | Yandex (png) |
-| ----------- | ------------ | ------------ | ------------ | ------------ |
-| Flat square | ![google flat-square](public/badge-google-flat-square.svg) | ![google flat-square](public/badge-google-flat-square.png) | ![yandex flat-square](public/badge-yandex-flat-square.png) | ![yandex flat-square](public/badge-yandex-flat-square.png) |
-| Flat        | ![google flat](public/badge-google-flat.svg) | ![google flat](public/badge-google-flat.png) | ![yandex flat](public/badge-yandex-flat.png) | ![yandex flat](public/badge-yandex-flat.png) |
-| Plastic     | ![google plastic](public/badge-google-plastic.svg) | ![google plastic](public/badge-google-plastic.png) | ![yandex plastic](public/badge-yandex-plastic.png) | ![yandex plastic](public/badge-yandex-plastic.png) |
-| Social      | ![google social](public/badge-google-social.svg) | ![google social](public/badge-google-social.png) | ![yandex social](public/badge-yandex-social.png) | ![yandex social](public/badge-yandex-social.png) |
+<table>
+  <tr>
+    <td><b>Type</b></td>
+    <td><b>Google (svg)</b></td>
+    <td><b>Google (png)</b></td>
+    <td><b>Yandex (svg)</b></td>
+    <td><b>Yandex (png)</b></td>
+  </tr>
+  <tr>
+    <td><i>Flat square</i></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-google-flat-square.svg" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-google-flat-square.png" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-yandex-flat-square.svg" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-yandex-flat-square.png" /></td>
+  </tr>
+  <tr>
+    <td><i>Flat</i></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-google-flat.svg" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-google-flat.png" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-yandex-flat.svg" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-yandex-flat.svg" /></td>
+  </tr>
+  <tr>
+    <td><i>Plastic</i></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-google-plastic.svg" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-google-plastic.png" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-yandex-plastic.svg" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-yandex-plastic.png" /></td>
+  </tr>
+  <tr>
+    <td><i>Social</i></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-google-social.svg" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-google-social.png" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-yandex-social.svg" /></td>
+    <td><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/badge-yandex-social.png" /></td>
+  </tr>
+  <tr>
+    <td><i>Pixel</i></td>
+    <td colspan="4"><img src="https://cdn.rawgit.com/gokaygurcan/analytics/master/public/pixel.gif" /> (there is a pixel here)</td>
+  </tr>
+</table>
 
 
 ## Usage
