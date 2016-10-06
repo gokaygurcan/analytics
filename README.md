@@ -16,6 +16,10 @@ You can deploy to Heroku:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+Or you can deploy on OpenShift:
+
+[![DEPLOY TO OpenShift](http://launch-shifter.rhcloud.com/launch/DEPLOY%20TO.svg)](https://openshift.redhat.com/app/console/application_type/custom?&cartridges[]=nodejs-0.10&initial_git_url=https://github.com/gokaygurcan/analytics.git&name=launch)
+
 or run on your own machine:
 
 ```bash
