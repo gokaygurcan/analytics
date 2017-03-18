@@ -37,7 +37,7 @@
     "universal-analytics": "^0.4.6"
   },
   "devDependencies": {
-    "xo": "^0.17.0"
+    "xo": "^0.18.0"
   },
   "xo": {
     "space": 2,
