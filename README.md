@@ -1,4 +1,6 @@
 # Analytics
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/gokaygurcan/analytics.svg)](https://greenkeeper.io/)
 Analytics beacon for general purpose.
 
 ---
