@@ -34,7 +34,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "serve-favicon": "^2.3.0",
-    "universal-analytics": "^0.4.6"
+    "universal-analytics": "^0.4.18"
   },
   "devDependencies": {
     "xo": "^0.17.0"
