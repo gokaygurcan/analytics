@@ -9,16 +9,13 @@ Analytics beacon for general purpose.
 ![vulnerabilities](https://snyk.io/test/github/gokaygurcan/analytics/65f28c8313247b99daa4226ed27f5605085eceaf/badge.svg?style=flat-square)
 ![license](https://img.shields.io/github/license/gokaygurcan/analytics.svg?style=flat-square)
 
+---
 
-## Installation
+## Installation
 
 You can deploy to Heroku:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-Or you can deploy on OpenShift:
-
-[![DEPLOY TO OpenShift](http://launch-shifter.rhcloud.com/launch/DEPLOY%20TO.svg)](https://openshift.redhat.com/app/console/application_type/custom?&cartridges[]=nodejs-0.10&initial_git_url=https://github.com/gokaygurcan/analytics.git&name=launch)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/gokaygurcan/analytics/tree/master)
 
 or run on your own machine:
 
@@ -111,7 +108,7 @@ You can use either _svg_ or _png_ extension with _style_ querystring. Default is
 
 - Social: `![analytics](https://analytics.gokaygurcan.com/UA-XXXXXXXX-X/organization_name/repository_name.svg?style=social)`
 
-### Yandex
+### Yandex (not done yet)
 
 You can use either _svg_ or _png_ extension with _style_ querystring. Default is _flat-square_.
 

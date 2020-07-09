@@ -2,15 +2,7 @@
 
 language: node_js
 node_js:
-  - '4' # LTS
-  - '6' # Latest
+  - '10'
 
-sudo: required
-dist: trusty
-
-before_install:
-  - npm install -g npm
-  - npm install -g xo
-
-script: 
+script:
   - npm test

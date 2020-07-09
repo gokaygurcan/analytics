@@ -3,15 +3,13 @@
 'use strict';
 
 // core modules
-const http = require('http');
-const path = require('path');
+const { createServer } = require('http');
+const { join } = require('path');
 
 // node_modules
 const bodyParser = require('body-parser');
-const chalk = require('chalk');
 const cookieParser = require('cookie-parser');
 const express = require('express');
-const favicon = require('serve-favicon');
 const ua = require('universal-analytics');
 
 // variables
@@ -20,32 +18,31 @@ const port = process.env.PORT || '6598';
 
 app.enable('trust proxy');
 app.set('x-powered-by', false);
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(join(__dirname, 'public')));
 
 // magic!
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
   res.redirect(302, 'https://www.gokaygurcan.com/'); // #3
 });
 
 app.get('/:tracking_id/*.(svg|png|gif)', (req, res) => {
-  let params = req.params;
-  let query = req.query;
+  const params = req.params;
+  const query = req.query;
 
   // vars
-  let id = params.tracking_id;
-  let brand = id.startsWith('UA') ? 'google' : 'yandex';
-  let path = params['0'];
-  let ext = params['1'];
-  let style = query.style ? query.style : 'flat-square';
-  let file = ext === 'gif' ? 'pixel' : 'badge-' + brand + '-' + style;
+  const id = params.tracking_id;
+  const brand = id.startsWith('UA') ? 'google' : 'yandex';
+  const path = params['0'];
+  const ext = params['1'];
+  const style = query.style ? query.style : 'flat-square';
+  const file = ext === 'gif' ? 'pixel' : 'badge-' + brand + '-' + style;
 
   if (brand === 'google') {
     // create a visitor
-    let visitor = ua(id);
+    const visitor = ua(id);
 
     // hit!
     visitor.pageview(
@@ -65,23 +62,27 @@ app.get('/:tracking_id/*.(svg|png|gif)', (req, res) => {
   }
 
   // render the badge
-  res.sendFile(`${__dirname}/public/${file}.${ext}`);
+  res.sendFile(join(__dirname, 'public', `${file}.${ext}`));
+});
+
+app.get('/favicon.ico', (_, res) => {
+  res.status(204).end();
 });
 
 // set port
 app.set('port', port);
 
 // create server
-const server = http.createServer(app);
+const server = createServer(app);
 
 // start listening
 server.listen(port);
 
 // handle events
 server.on('error', error => {
-  console.error(chalk.red(`Error occured: ${chalk.underline(error.code)}`));
+  console.error(`Error occured: ${error.code}`);
   throw error;
 }).on('listening', () => {
-  console.info(chalk.green(`Started on port ${chalk.underline(server.address().port)}`));
-  console.info(chalk.gray(`ktrl/Ctrl + C to shut down. \n`));
+  console.info(`Started on port ${server.address().port}`);
+  console.info('ktrl/Ctrl + C to shut down. \n');
 });
