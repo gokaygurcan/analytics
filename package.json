@@ -29,9 +29,9 @@
     "google"
   ],
   "dependencies": {
-    "body-parser": "1.19.0",
+    "body-parser": "1.19.2",
     "cookie-parser": "1.4.5",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "universal-analytics": "0.4.23"
   },
   "devDependencies": {
